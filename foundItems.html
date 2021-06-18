@@ -1,6 +1,7 @@
-<ol>
-  <li ng-repeat="item in foundItems">
-    {{ item.name }}, {{ item.short_name }}, {{ item.description }}
+<ul>
+  <li ng-repeat="item in menu.found">
+    {{ item.name }} , {{ item.short_name }}, {{ item.description }}
     <button ng-click="foundItems.onRemove({index: $index});">Don't want this one!</button>
   </li>
-</ol>
+</ul>
+<div class="error" ng-if="!menu.found.length">Nothing found</div>
